@@ -46,6 +46,7 @@ public class PigeonController {
         System.out.println("hnaaaa : " + req.id());
         Competition comp = pigeonService.assignPigeon(req.ringNumber(), req.id());
         return  ResponseEntity.status(HttpStatus.FOUND).body(comp);
+
     }
 
 

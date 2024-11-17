@@ -10,4 +10,5 @@ public interface CompetitionServiceInterface {
     Competition saveCompetition(Competition competition);
     Competition updateCompetition(Competition competition);
     void deleteCompetition(String id);
+    Competition finishCompetition(String id);
 }

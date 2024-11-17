@@ -32,4 +32,11 @@ public class CompetitionService implements CompetitionServiceInterface {
     public void deleteCompetition(String id){
         competitionRepository.deleteById(id);
     }
+    @Override
+    public Competition finishCompetition(String id){
+        Competition comp = competitionRepository.findById(id).orElseThrow(()-> new RuntimeException("Entity not found"));
+        comp.setIs_finished(true);
+        competitionRepository.save(comp);
+        return comp;
+    }
 }
